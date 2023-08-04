@@ -10,6 +10,7 @@ import Switch from '../src/components/categorias/Switch'
 import Error from './components/categorias/Error';
 import Xbox from './components/categorias/Xbox';
 import PlaystationId from './components/categorias/PlaystationId';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
        <Route path ='/' element={<ItemListContainer className="Contenedor"/>}/>
        <Route path ='/category/:id' element={<ItemListContainer className="Contenedor"/>}/>
+       <Route path = {'/item/:id'} element={<ItemDetailContainer/>}/>
        <Route path ='/Playstation/:id' element={<PlaystationId/>}/>
        <Route path ='/Xbox' element={<Xbox/>}/>
        <Route path ='/Playstation' element={<Playstation/>}/>
