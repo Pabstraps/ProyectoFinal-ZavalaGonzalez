@@ -1,6 +1,6 @@
 [
-    {"id":1, "nombre" : "Kingdom hearts 2", "plataforma" : "Playstation 2", "imagen" : "https://static.wikia.nocookie.net/kingdomhearts/images/8/81/North_American_Cover_Art_KHII.png/revision/latest?cb=20110820095741"}
-
+    {"id":1, "nombre" : "Kingdom hearts 2", "plataforma" : "Playstation 2", "imagen" : "https://static.wikia.nocookie.net/kingdomhearts/images/8/81/North_American_Cover_Art_KHII.png/revision/latest?cb=20110820095741", "precio": 900, "stock":3},
+    {"id":2, "nombre" : "Devil May Cry", "plataforma" : "Playstation 2", "imagen" : "https://cdn.mobygames.com/covers/4323350-devil-may-cry-playstation-2-front-cover.jpg", "precio": 1100, "stock":4}
 
  
 

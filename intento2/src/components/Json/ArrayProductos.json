@@ -1,0 +1,10 @@
+[
+    {"id":1, "nombre" : "Kingdom hearts 2", "plataforma" : "Playstation 2", "imagen" : "https://www.otaquest.com/wp-content/uploads/2021/06/asdf-722x1024.jpg", "sinopsis": "Esta secuela incorpora varias novedades, como la posibilidad de fusionarse con los miembros del equipo, permitiendo portar dos armas a la vez, así como nuevos enemigos, los Incorpóreos. Además se presentan varios mundos nuevos, que se suman a varios de los ya conocidos en Kingdom Hearts, como Coliseo del Olimpo, Atlántica, Ciudad de Halloween, o Bastión Hueco.",  "precio": 900, "stock":3},
+    {"id":2, "nombre" : "Devil May Cry", "plataforma" : "Playstation 2", "imagen" : "https://cdn.mobygames.com/covers/4323350-devil-may-cry-playstation-2-front-cover.jpg", "sinopsis": "Basado en el popular Videojuego. Dante, un hijo sobrehumano de un poderoso demonio asesinado y una mujer humana y un maestro de arma de fuego y espada, dirige una agencia de caza demonio. A pesar de los problemas financieros, nunca pierde la calma ya que el trabajo siempre viene llamando tarde o temprano.", "precio": 1100, "stock":4}
+
+ 
+
+
+
+
+]
