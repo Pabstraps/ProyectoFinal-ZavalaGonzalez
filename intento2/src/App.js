@@ -4,7 +4,7 @@ import Error from './components/categorias/Error';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer2 from './components/ItemListContainer/ItemListContainer2';
 import Navbar2 from './components/navBar/NavBar2';
-
+import CartProvider from './components/Context/CartContext';
 
 
 
@@ -12,6 +12,8 @@ import Navbar2 from './components/navBar/NavBar2';
 function App() {
   return (
     <div className="App">
+
+    <CartProvider>
      <BrowserRouter>
       <Navbar2 className='nav'/>
       <Routes>
@@ -21,6 +23,8 @@ function App() {
        <Route path ='*' element={<Error/>}/>
       </Routes>
      </BrowserRouter>
+    </CartProvider>
+
     </div>
   );
 } 

@@ -1,24 +1,19 @@
  import React from 'react';
 import { useEffect,useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ArrayProductos from '../Json/ArrayProductos.json'
-import ItemList2 from '../ItemList/ItemList2';
 
+import ItemList2 from '../ItemList/ItemList2';
+import {getFirestore,collection,getDocs} from 'firebase/firestore/';
 
 const ItemListContainer2 = () => {
     const [item, setItem] = useState([]);
     const {id} = useParams();
 
     useEffect(()=>{
-      const promesa = new Promise((resolve)=>{
-        setTimeout(()=>{
-          resolve(id ? ArrayProductos.filter(item=> item.plataforma === id) : ArrayProductos)
-        },1000)
-      });
-
-      promesa.then((data)=>{
-        setItem(data)
-      })
+      const querydb = getFirestore();
+      const queryCollection = collection(querydb, 'KirintorStore');
+      getDocs(queryCollection)
+     .then(res => setItem(res.docs.map(p=>({id: p.id,...p.data()}))))
     }, [id])
   
   return (

@@ -7,6 +7,8 @@ function BotonCarrito() {
       return (
         <>
           <Link to="/Carrito"><img src={CartLogo} width={60}/></Link>
+
+          {getQuantity()}
           
         </>
       );
