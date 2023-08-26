@@ -6,7 +6,7 @@ import ItemListContainer2 from './components/ItemListContainer/ItemListContainer
 import Navbar2 from './components/navBar/NavBar2';
 import CartProvider from './components/Context/CartContext';
 import Checkout from './components/Checkout/Checkout';
-
+import Cart from './components/Cart/Cart';
 
 
 
@@ -18,10 +18,11 @@ function App() {
      <BrowserRouter>
       <Navbar2 className='nav'/>
       <Routes>
-       <Route path ={'/'} element={<ItemListContainer2 className="Contenedor"/>}/>
-       <Route path ={'/plataforma/:id'} element={<ItemListContainer2 className="Contenedor"/>}/>
+       <Route path = {'/'} element={<ItemListContainer2 className="Contenedor"/>}/>
+       <Route path = {'/plataforma/:id'} element={<ItemListContainer2 className="Contenedor"/>}/>
        <Route path = {'/item/:id'} element={<ItemDetailContainer/>}/>
        <Route path = {'/checkout'} element ={<Checkout/>}/>
+       <Route path = {"/cart"} element={<Cart/>}/>
        <Route path ='*' element={<Error/>}/>
       </Routes>
      </BrowserRouter>

@@ -12,13 +12,16 @@ const CartProvider = ({children}) => {
 
     }
     useEffect(() => {
-        console.log(cart)
+        console.log(cart);
     }, [cart])
 
-    
+    const getQuantity = () =>{
+        return cart.reduce((acum,unItem)=> acum = unItem.cant,0)
+    }
+
 
     return (
-        <CartContext.Provider value={{cart,addItem}}>
+        <CartContext.Provider value={{cart,addItem,getQuantity}}>
         {children}
         </CartContext.Provider>
     )

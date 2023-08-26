@@ -1,43 +1,23 @@
-import React from "react";
-import { useState } from "react";
+import {useState} from 'react';
 
-const ItemCount = ({stockItems}) => {
+const ItemCount = ({inicial, stock, onAdd}) => {
+    
+    const [count, setCount] = useState(inicial);
+    
+    const sumar = () => count < stock && setCount(count + 1)
 
-    const [counter, setCounter] = useState(1);
-    const [stock, setStock] = useState(stockItems);
+    const restar = () => count > 1 && setCount(count - 1)
+    
+    const agregarAlCarrito = () => onAdd(count)
 
-    const incrementarStock = () => {
-        if (counter < stock) {
-            setCounter(counter + 1);
-        } 
-    }
-
-    const decrementarStock = () => {
-        if (counter > 1) {
-            setCounter(counter - 1)
-        }
-        
-    }
-
-    return(
-        <div className="container" id="itemcount">
-            <div className="row mb-3">
-                <div className="col-md-2">
-                    <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" className="btn btn-outline-primary" onClick={decrementarStock} >-</button>
-                        <button type="button" className="btn btn-outline-primary">{counter} </button>
-                        <button type="button" className="btn btn-outline-primary" onClick={incrementarStock} >+</button>
-                     </div>
-                </div>
-            </div>
-         <div className="row">
-         <div className="col-md-2">
-            <button type="button" className="btn btn-outline-primary" >Agregar al carrito</button>    
-                
-                </div>
-            </div>
-        </div>  
-    )
+    return (
+        <div>
+            <button onClick={restar} className="btn btn-dark"><i className="fas fa-minus">-</i></button>
+                    {count}
+            <button onClick={sumar} className="btn btn-dark"><i className="fas fa-plus"></i>+</button>
+            <button className="btn btn-dark"onClick={agregarAlCarrito}><i className="fas fa-cart-plus">Agregar al carrito</i></button>
+        </div>
+    );
 }
 
 export default ItemCount;

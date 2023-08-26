@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
 
       
       const querydb = getFirestore();
-      const queryDoc = doc(querydb,'Products','MlZJI6MtemrNP5SZEQQR');
+      const queryDoc = doc(querydb,'Products',id);
       getDoc(queryDoc)
       .then(res => setItem(({id:res.id, ...res.data()})));
 
